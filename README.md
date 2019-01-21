@@ -15,4 +15,4 @@ bash get_coco_dataset.sh</br>
 
 Darknet安装配置</br>
 git clone https://github.com/pjreddie/darkent.git</br>
-配置 yolov3.cfg 并下载yolov3.weights(别人已经熟练好的模型)</br>
+配置 yolov3.cfg 并下载yolov3.weights(别人已经训练好的模型)</br>
