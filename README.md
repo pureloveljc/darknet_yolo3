@@ -3,7 +3,7 @@
 git clone https://github.com/pdollar/coco.git</br>
 cd coco/PythonAPI</br>
 vi Makefile </br>
-# 将python改为python3</br>
+将python改为python3</br>
 make</br>
 
 第二数据集下载</br>
