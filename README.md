@@ -42,7 +42,7 @@ No Obj: 0.002799： 期望该值越来越小, 但不为零;</br>
 count: 4： 所有当前 subdivision 图片（本例中一共 8 张）中包含正样本的图片的数量。 在输出 log 中的其他行中, 可以看到其他 subdivision 也有的只含有 6 或 1 个正样本, 说明在 subdivision 中含有不包含在检测对象 classes 中的图片。</br>
 
 开始训练</br>
-
+sudo ./darknet detector train cfg/coco.data cfg/resnet101.cfg backup/resnet101_10000.weights</br> 
 sudo ./darknet detector train cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74 -gpus 0,1</br>
 预训练权重</br>
 sudo ./darknet detector train cfg/coco.data cfg/resnet101.cfg backup/resnet101_900.weights</br>
