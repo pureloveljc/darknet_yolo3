@@ -43,7 +43,8 @@ count: 4： 所有当前 subdivision 图片（本例中一共 8 张）中包含�
 
 开始训练</br>
 
-./darknet detector train cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74 -gpus 0,1</br>
+sudo ./darknet detector train cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74 -gpus 0,1</br>
 
 开始测试</br>
-./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.weights data/test.jpg
+sudo ./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.weights data/test.jpg
+sudo ./darknet detector test cfg/coco.data cfg/resnet101.cfg backup/resnet101_900.weights test1.jpg
