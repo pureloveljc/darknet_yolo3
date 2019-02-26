@@ -18,3 +18,10 @@ git clone https://github.com/pjreddie/darkent.git</br>
 配置 yolov3.cfg 并下载yolov3.weights(别人已经训练好的模型)</br>
 ./darknet imtest data/dog.jpg  # 测试
 
+git clone https://github.com/pjreddie/darknet
+cd darknet
+vim Makefile：
+  ... GPU=1
+  ... CUDNN=1
+  ... OPENCV=1
+make
