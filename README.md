@@ -49,3 +49,6 @@ sudo ./darknet detector train cfg/coco.data cfg/resnet101.cfg backup/resnet101_9
 开始测试</br>
 sudo ./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.weights data/test.jpg</br>
 sudo ./darknet detector test cfg/coco.data cfg/resnet101.cfg backup/resnet101_900.weights test1.jpg</br>
+
+如果出现NaN
+1）学习率一般都是从0.01开始调（我更喜欢从0.001，第一个step久一些），不太会比0.01更大的。2）步长设置多大，要根据你的训练样本数量来，比如训练样本1000个，batchsize=10，那每一个epoch就是需要100个step，你的衰减的步长就可以设置为1000或者500，至少保证5-10个epoch。3）学习率大的话，训练的时候会震荡，这个是正常现象，同时loss降低的也快，观察loss变化，大概在多少次的时候稳定，不在降，这个时候在来指导后续的step设置；4）学习率一般到1e-6基本上就不会有太大变化了，所以在设置低了往往意义也不大了；5）在调试的时候，可以考虑先使用小样本和大的学习，保证问题是可以拟合的，在选择合适的学习率。6）step通常在第一次要久一些，后面可以保证5个左右的epoch就好了，具体还要看实际情况，所以一定要对log做分析
